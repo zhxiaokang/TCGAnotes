@@ -1,0 +1,17 @@
+---
+title: "Study abbreviations used in TCGA"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  pdf_document: default
+---
+
+```{r}
+library(TCGAutils)
+
+data("diseaseCodes", package = "TCGAutils")
+
+knitr::kable(diseaseCodes[, c("Study.Abbreviation", "Study.Name")])
+```
+
